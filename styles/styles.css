@@ -208,9 +208,9 @@ body {
 
 .popover-basket {
   position: absolute;
-  top: 84px;
+  top: 124px;
   right: -18px;
-  z-index: 1;
+  z-index: 2;
   box-sizing: border-box;
   width: 320px;
   font-size: 16px;
@@ -231,7 +231,7 @@ body {
   background-image: url('../images/popover-triangle.svg');
 }
 
-.popover-content {
+.popover-basket-content {
   height: 100%;
 }
 
@@ -386,7 +386,7 @@ body {
 
 .popover {
   position: absolute;
-  top: 22px;
+  top: 40px;
   right: -59px;
   z-index: 1;
   box-sizing: border-box;
@@ -419,9 +419,14 @@ body {
   padding: 0;
 }
 
+.popover-item-link {
+  text-decoration: none;
+  font-family: inherit;
+  color: #000000;
+}
+
 .popover-item:last-child {
   grid-column-start: 1;
-
 }
 
 /* Slider */
@@ -431,26 +436,7 @@ body {
   padding: 0px 140px 19px 140px;
 }
 
-.slider-inner {
-  display: flex;
-}
-
-.slider-card {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  background-image: linear-gradient(#ffe17f 105px, #ffffff 105px);
-}
-
-.slider-card-img {
-  position: absolute;
-  top: -37px;
-  left: 0px;
-}
-
+/* Buttons (arrows) */
 .buttons-wrapper {
   position: relative;
 }
@@ -496,6 +482,8 @@ body {
 .previous-slide:active {
   box-shadow: 0 0 2px 0 #af4fff;
 }
+
+/* Buttons next/prev */
 
 .slider-pagination {
   position: absolute;
@@ -548,11 +536,28 @@ body {
   opacity: 0.3;
   outline: none;
   border: none;
-
 }
 
 .slider-pagination-current:focus {
   outline: 2px solid #af4fff;
+}
+
+/* Slider card */
+
+.slider-card {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(#ffe17f 105px, #ffffff 105px);
+}
+
+.slider-card-img {
+  position: absolute;
+  top: -37px;
+  left: 0px;
 }
 
 /* Slider info */
@@ -598,7 +603,6 @@ body {
   margin: 0px 0 45px 0;
   text-align: center;
   padding: 10px 40px;
-
 }
 
 .technical-list {
@@ -1035,7 +1039,6 @@ body {
   align-items: baseline;
 }
 
-
 .newsletter-input {
   margin: 0;
   padding: 13px 30px 8px 10px;
@@ -1082,7 +1085,6 @@ body {
   width: 14px;
   height: 14px;
   background-image: url('../images/newsletter-arrow.svg');
-
 }
 
 /* Footer */
@@ -1105,10 +1107,6 @@ body {
 .footer-logo {
   position: absolute;
   top: -70px;
-}
-
-.footer-logo-img {
-  margin: 0 0 35px 0;
 }
 
 .footer-address {
@@ -1249,6 +1247,7 @@ body {
 }
 
 /* Breadcrumbs */
+
 .main-inner-title {
   margin: 0 140px;
   padding: 35px 60px 5px 60px;
@@ -1430,15 +1429,15 @@ body {
   margin: 0px 0 14px 0;
 }
 
+.control-color-label {
+  position: relative;
+  padding-left: 20px;
+}
+
 .control-label {
   padding-left: 17px;
   font-size: 16px;
   line-height: 19px;
-}
-
-.control-color-label {
-  position: relative;
-  padding-left: 20px;
 }
 
 .control-mark {
@@ -1488,12 +1487,7 @@ body {
   margin-bottom: 10px;
 }
 
-.filter-button {
-  width: 220px;
-  background-image: linear-gradient(#f0f0f0 16px, #ffe17f 16px, #ffe17f 24px, #f0f0f0 24px);
-}
-
-.bluetooth-control {
+.control-bluetooth-label {
   position: relative;
   display: block;
   padding-left: 16px;
@@ -1522,6 +1516,12 @@ body {
   content: '';
 }
 
+/* Filter button */
+
+.filter-button {
+  width: 220px;
+  background-image: linear-gradient(#f0f0f0 16px, #ffe17f 16px, #ffe17f 24px, #f0f0f0 24px);
+}
 
 /* Catalog right column */
 
@@ -1596,7 +1596,6 @@ body {
   opacity: 0.2;
 }
 
-
 .link-max::before {
   position: absolute;
   content: "";
@@ -1653,6 +1652,8 @@ body {
   color: #444444;
 }
 
+/* New product*/
+
 .new {
   position: relative;
 }
@@ -1694,9 +1695,9 @@ body {
   cursor: pointer;
 }
 
-/* Paganation */
+/* Pagination */
 
-.paganation-wrapper {
+.pagination-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1706,7 +1707,7 @@ body {
   background-color: #ebebeb;
 }
 
-.paganation-list {
+.pagination-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 3px;
@@ -1716,7 +1717,7 @@ body {
 }
 
 
-.paganation-item-link {
+.pagination-item-link {
   margin: 0;
   padding: 10px 10px;
   font-family: inherit;
@@ -1728,7 +1729,7 @@ body {
   text-transform: uppercase;
 }
 
-.paganation-button {
+.pagination-button {
   font-family: 'Raleway', Arial, sans-serif;
   font-size: 18px;
   line-height: 21px;

@@ -11,9 +11,11 @@
   <div class="page-wrapper">
     <!-- Шапка -->
     <header class="page-header">
+      <!-- Лого -->
       <a class="navigation-logo" href="#">
         <img class="page-header-logo" src="images/logo-black.svg" width="145" height="36" alt="Логотип Девайс." />
       </a>
+      <!-- Пользовательская навигация -->
       <div class="navigation-container">
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <input id="search" class="search-input" type="search" placeholder="Текст поиска" name="search" />
@@ -23,6 +25,7 @@
           <a class="navigation-user-link navigation-log-in" href="#">Войти</a>
           <a class="navigation-user-link navigation-compare" href="#">Сравнить</a>
           <button class="navigation-user-link navigation-basket" type="button">Корзина</button>
+          <!-- Поповер корзина -->
           <div class="popover-basket">
             <div class="popover-basket-content">
               <ul class="popover-basket-list">
@@ -48,28 +51,30 @@
           </div>
         </div>
       </div>
+      <!-- Навигация -->
       <nav class="navigation">
         <button class="navigation-button" type="button">Каталог&nbsp;товаров</button>
+        <!-- Поповер навигация -->
         <div class="popover">
           <div class="popover-content">
             <ul class="popover-list">
               <li class="popover-item">
-                <a class="popover-item-link">Виртуальная реальность</a>
+                <a class="popover-item-link" href="#">Виртуальная реальность</a>
               </li>
               <li class="popover-item">
-                <a class="popover-item-link">Фитнес-браслеты</a>
+                <a class="popover-item-link" href="#">Фитнес-браслеты</a>
               </li>
               <li class="popover-item">
-                <a class="popover-item-link">Квадрокоптеры</a>
+                <a class="popover-item-link" href="#">Квадрокоптеры</a>
               </li>
               <li class="popover-item">
-                <a class="popover-item-link">Моноподы для селфи</a>
+                <a class="popover-item-link" href="#">Моноподы для селфи</a>
               </li>
               <li class="popover-item">
-                <a class="popover-item-link">Умные часы</a>
+                <a class="popover-item-link" href="#">Умные часы</a>
               </li>
               <li class="popover-item">
-                <a class="popover-item-link">Экшн-камеры</a>
+                <a class="popover-item-link" href="#">Экшн-камеры</a>
               </li>
             </ul>
           </div>
@@ -87,58 +92,59 @@
         </ul>
       </nav>
     </header>
-    <!-- Главный заголовок -->
-    <h1 class="visually-hidden">Главная страница магазина "Девайс"</h1>
-    <!-- Слайдер -->
-    <section class="slider">
-      <h2 class="visually-hidden">Слайдер с популярными товарами.</h2>
-      <div class="buttons-wrapper">
-        <button class="previous-slide" type="button">
-          <span class="visually-hidden">Назад</span>
-        </button>
-        <button class="next-slide" type="button">
-          <span class="visually-hidden">Вперед</span>
-        </button>
-      </div>
-      <ol class="slider-pagination">
-        <li class="slider-pagination-item">
-          <button class="slider-pagination-button slider-pagination-current" type="button">
-            <span class="visually-hidden">1 фото</span>
+    <!-- Основной контейнер -->
+    <main class="main-container">
+      <!-- Главный заголовок -->
+      <h1 class="visually-hidden">Главная страница интернет-магазина "Девайс"</h1>
+      <!-- Слайдер -->
+      <section class="slider">
+        <h2 class="visually-hidden">Слайдер с популярными товарами.</h2>
+        <!-- Стрелочки вперед/назад -->
+        <div class="buttons-wrapper">
+          <button class="previous-slide" type="button">
+            <span class="visually-hidden">Назад</span>
           </button>
-        </li>
-        <li class="slider-pagination-item">
-          <button class="slider-pagination-button" type="button">
-            <span class="visually-hidden">2 фото</span>
+          <button class="next-slide" type="button">
+            <span class="visually-hidden">Вперед</span>
           </button>
-        </li>
-        <li class="slider-pagination-item">
-          <button class="slider-pagination-button" type="button">
-            <span class="visually-hidden">2 фото</span>
-          </button>
-        </li>
-      </ol>
-
-      <div class="slider-card">
-        <img class="slider-card-img" src="images/slider-1.png" width="560" height="560" alt="Дрон.">
-        <div class="slider-info-wrapper">
-          <span class="slider-number"> 01 </span>
-          <h2 class="slider-card-title">Порхает как&nbsp;бабочка, жалит как пчела!</h2>
-          <p class="slider-card-info">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
-            замаскированным
-            под стандартную камеру.</p>
-          <a class="slider-card-button button" href="#">Подробнее</a>
-          <dl class="technical-list">
-            <dt class="technical-term term-one ">Дальность полета</dt>
-            <dd class="technical-description desription-one">800 м</dd>
-            <dt class="technical-term term-two ">Радиус поражения</dt>
-            <dd class="technical-description desription-two">50 м </dd>
-          </dl>
         </div>
-      </div>
-
-      <!--Остальные страницы слайдера -->
-      <!--
-      <div class="slider-card">
+        <!-- Кнопки вперед/назад -->
+        <ol class="slider-pagination">
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button slider-pagination-current" type="button">
+              <span class="visually-hidden">1 фото</span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">2 фото</span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">2 фото</span>
+            </button>
+          </li>
+        </ol>
+        <div class="slider-card">
+          <img class="slider-card-img" src="images/slider-1.png" width="560" height="560" alt="Дрон.">
+          <div class="slider-info-wrapper">
+            <span class="slider-number"> 01 </span>
+            <h2 class="slider-card-title">Порхает как&nbsp;бабочка, жалит как пчела!</h2>
+            <p class="slider-card-info">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером,
+              замаскированным
+              под стандартную камеру.</p>
+            <a class="slider-card-button button" href="#">Подробнее</a>
+            <dl class="technical-list">
+              <dt class="technical-term term-one ">Дальность полета</dt>
+              <dd class="technical-description desription-one">800 м</dd>
+              <dt class="technical-term term-two ">Радиус поражения</dt>
+              <dd class="technical-description desription-two">50 м </dd>
+            </dl>
+          </div>
+        </div>
+        <!--Остальные страницы слайдера -->
+        <!-- <div class="slider-card">
         <img class="slider-card-img" src="images/slider-2.png" width="560" height="560" alt="Смарт часы.">
         <div class="slider-info-wrapper">
           <span class="slider-number"> 02 </span>
@@ -153,7 +159,6 @@
           </dl>
         </div>
       </div>
-
       <div class="slider-card">
         <img class="slider-card-img" src="images/slider-3.png" width="560" height="560" alt="Селфи-палка.">
         <div class="slider-info-wrapper">
@@ -172,9 +177,7 @@
           </dl>
         </div>
       </div>   -->
-
-    </section>
-    <main class="main-container">
+      </section>
       <!-- Каталог -->
       <section class="catalog-index">
         <h2 class="visually-hidden">Каталог товаров</h2>
@@ -213,7 +216,6 @@
             <button class="services-button button" type="button">Кредит</button>
           </li>
         </ul>
-
         <ul class="advantages-list">
           <li class="advantages-item advantages-item-delivery">
             <h3 class="advantages-item-title">Доставка</h3>
@@ -290,9 +292,11 @@
     <!-- Подвал -->
     <footer class="page-footer">
       <div class="footer-container">
+        <!-- Лого -->
         <a class="footer-logo" href="index.html">
           <img class="footer-logo-img" src="images/logo-yellow.svg" width="145" height="36" alt="Логотип Девайс." />
         </a>
+        <!-- Адресс -->
         <address class="footer-address">
           <p class="footer-address-info">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
         </address>
@@ -308,6 +312,7 @@
             <a class="footer-services-link" href="#">Контакты</a>
           </li>
         </ul>
+        <!-- Номер телефона -->
         <a class="footer-phone" href="tel:+78128121212">Тел.:+7 (812) 812-12-12</a>
         <!-- Социальные сети -->
         <ul class="footer-social-list">
@@ -327,6 +332,7 @@
             </a>
           </li>
         </ul>
+        <!-- Лого академии -->
         <a class="htmlacademy-link" href="https://htmlacademy.ru/">
           <svg class="htmlacademy-icon" aria-hidden="true" focusable="false" width="115" height="33"
             viewBox="0 0 115 33" fill="none">
