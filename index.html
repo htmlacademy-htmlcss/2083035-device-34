@@ -32,17 +32,19 @@
             <div class="popover-basket-content">
               <ul class="popover-basket-list">
                 <li class="popover-basket-item">
-                  <div class="basket-item-wrapper">
-                    <img class="popover-basket-img" src="images/product-1.jpg" width="39" height="43">
+                  <a class="popover-basket-link">
+                    <img class="popover-basket-img" src="images/product-1.jpg" width="39" height="43"
+                      alt="Любительская селфи-палка.">
                     <p class="popover-basket-description">Любительская<br>селфи палка</p>
-                  </div>
+                  </a>
                   <button class="popover-close-button"></button>
                 </li>
                 <li class="popover-basket-item">
-                  <div class="basket-item-wrapper">
-                  <img class="popover-basket-img" src="images/product-2.jpg" width="39" height="43">
-                  <p class="popover-basket-description">Профессиональная<br> селфи палка</p>
-                </div>
+                  <a class="popover-basket-link">
+                    <img class="popover-basket-img" src="images/product-2.jpg" width="39" height="43"
+                      alt="Профессиональная селфи палка.">
+                    <p class="popover-basket-description">Профессиональная<br> селфи палка</p>
+                  </a>
                   <button class="popover-close-button"></button>
                 </li>
               </ul>
@@ -391,6 +393,42 @@
       </div>
     </footer>
   </div>
+  <!-- Модальное окно -->
+  <div class="modal-container">
+    <div class="modal ">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="modal-group-one">
+            <label class="modal-label name-label" for="name">Ваше имя:</label>
+            <input class="name-field field" type="text" id="name" name="name" placeholder="Введите имя" />
+            <label class="modal-label email-label" for="modal-email">Ваш e-mail:</label>
+            <input class="email-field field" type="text" id="modal-email" name="email" placeholder="Введите e-mail" />
+          </div>
+          <div class="modal-group-two">
+            <label class="modal-label product-label" for="product">Что нужно привезти:</label>
+            <input class="product-field field" type="text" id="product" name="product"
+              placeholder="В свободной форме" />
+            <label class=" modal-label amount-label" for="amount">Количество:</label>
+            <span class="input-wrapper">
+              <button class="button-minus" type="button">
+                <span class="visually-hidden">Минус.</span>
+              </button>
+              <input class="amount-field field" type="text" id="amount" name="amount" placeholder="1" />
+              <button class="button-plus" type="button">
+                <span class="visually-hidden">Плюс.</span>
+              </button>
+            </span>
+          </div>
+          <button class=" modal-button button">Отправить</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
   <script src="./js/index.js"></script>
 </body>
 

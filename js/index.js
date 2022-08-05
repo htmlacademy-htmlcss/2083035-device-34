@@ -54,3 +54,25 @@ sliderButtonPrev.addEventListener('click', (evt) => {
   sliderButtons[index].classList.add('is-active');
   sliderCards[index].classList.add('is-active');
 });
+
+
+const rareProductLink = document.querySelector('.rare-product-link');
+const modalCloseButton = document.querySelector('.modal-close-button');
+const modal = document.querySelector('.modal-container');
+
+rareProductLink.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  modal.classList.add('is-open');
+});
+
+modalCloseButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  modal.classList.remove('is-open');
+});
+
+document.addEventListener('keydown', (evt) => {
+  if(evt.key === 'Escape') {
+    evt.preventDefault();
+    modal.classList.remove('is-open');
+  }
+});
