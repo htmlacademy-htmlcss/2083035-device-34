@@ -26,35 +26,37 @@
         <div class="navigation-user">
           <a class="navigation-user-link navigation-log-in" href="#">Войти</a>
           <a class="navigation-user-link navigation-compare" href="#">Сравнить</a>
-          <button class="navigation-user-link navigation-basket" type="button">Корзина</button>
-          <!-- Поповер корзина -->
-          <div class="popover-basket">
-            <div class="popover-basket-content">
-              <ul class="popover-basket-list">
-                <li class="popover-basket-item">
-                  <a class="popover-basket-link">
-                    <img class="popover-basket-img" src="images/product-1.jpg" width="39" height="43"
-                      alt="Любительская селфи-палка.">
-                    <p class="popover-basket-description">Любительская<br>селфи палка</p>
-                  </a>
-                  <button class="popover-close-button"></button>
-                </li>
-                <li class="popover-basket-item">
-                  <a class="popover-basket-link">
-                    <img class="popover-basket-img" src="images/product-2.jpg" width="39" height="43"
-                      alt="Профессиональная селфи палка.">
-                    <p class="popover-basket-description">Профессиональная<br> селфи палка</p>
-                  </a>
-                  <button class="popover-close-button"></button>
-                </li>
-              </ul>
-              <div class="popover-container">
-                <span class="popover-container-info">Товаров:</span>
-                <span class="popover-container-info">2</span>
-                <span class="popover-container-info">Сумма:</span>
-                <span class="popover-container-info">2000 ₽</span>
+          <div class="navigation-basket-wrapper">
+            <button class="navigation-user-link navigation-basket" type="button">Корзина</button>
+            <!-- Поповер корзина -->
+            <div class="popover-basket">
+              <div class="popover-basket-content">
+                <ul class="popover-basket-list">
+                  <li class="popover-basket-item">
+                    <a class="popover-basket-link" href="#">
+                      <img class="popover-basket-img" src="images/product-1.jpg" width="39" height="43"
+                        alt="Любительская селфи-палка.">
+                      <p class="popover-basket-description">Любительская<br>селфи палка</p>
+                    </a>
+                    <button class="popover-close-button"></button>
+                  </li>
+                  <li class="popover-basket-item">
+                    <a class="popover-basket-link" href="#">
+                      <img class="popover-basket-img" src="images/product-2.jpg" width="39" height="43"
+                        alt="Профессиональная селфи палка.">
+                      <p class="popover-basket-description">Профессиональная<br> селфи палка</p>
+                    </a>
+                    <button class="popover-close-button"></button>
+                  </li>
+                </ul>
+                <div class="popover-container">
+                  <span class="popover-container-info">Товаров:</span>
+                  <span class="popover-container-info">2</span>
+                  <span class="popover-container-info">Сумма:</span>
+                  <span class="popover-container-info">2000 ₽</span>
+                </div>
+                <button class="open-basket-button" type="button">Открыть корзину</button>
               </div>
-              <button class="open-basket-button" type="button">Открыть корзину</button>
             </div>
           </div>
         </div>
@@ -75,7 +77,7 @@
                   <a class="popover-item-link" href="#">Виртуальная реальность</a>
                 </li>
                 <li class="popover-item">
-                  <a class="popover-item-link " href="catalog.html">Моноподы для селфи</a>
+                  <a class="popover-item-link popover-item-active" href="catalog.html">Моноподы для селфи</a>
                 </li>
                 <li class="popover-item">
                   <a class="popover-item-link" href="#">Экшн-камеры</a>
@@ -326,7 +328,7 @@
               а также акции, спецпредложения и вот это вот всё.</p>
           </div>
           <div class="newsletter-container-two">
-            <!-- Для отображения ошибки, добавить тегу <input> класс is-error-->
+            <!-- Для отображения ошибки, добавить тегу <input> класс has-error-->
             <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
               <input id="email" class="newsletter-input " type="email" placeholder="Ваш e-mail" name="email" required />
               <button class="newsletter-button " type="submit">Подписаться</button>
@@ -404,20 +406,30 @@
         <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="modal-group-one">
             <label class="modal-label name-label" for="name">Ваше имя:</label>
-            <input class="name-field field" type="text" id="name" name="name" placeholder="Введите имя" />
-            <label class="modal-label email-label" for="modal-email">Ваш e-mail:</label>
-            <input class="email-field field" type="text" id="modal-email" name="email" placeholder="Введите e-mail" />
+            <input class="field name-field " type="text" id="name" name="name" placeholder="Введите имя" />
+            <button class="name-field-button" type="button"></button>
+            <label class="modal-label email-label " for="modal-email">Ваш e-mail:</label>
+            <!--Для появления сообщения об ошибке тегам <span> и <input> добавить класс modal-error-->
+            <span class="modal-error-description ">Забавный у вас адрес</span>
+            <input class="field email-field" type="text" id="modal-email" name="email" placeholder="Введите e-mail" />
+            <button class="email-field-button" type="button"></button>
           </div>
           <div class="modal-group-two">
             <label class="modal-label product-label" for="product">Что нужно привезти:</label>
-            <input class="product-field field" type="text" id="product" name="product"
+            <input class=" field product-field " type="text" id="product" name="product"
               placeholder="В свободной форме" />
             <label class=" modal-label amount-label" for="amount">Количество:</label>
+            <span class="tooltip ">
+              <button class="tooltip-toggle" type="button" aria-label="tooltip-label"></button>
+              <span class="tooltip-text" id="tooltip-label">Постараемся найти, сколько нужно. Привезём сколько получится
+                по требованиям
+                к провозу багажа.</span>
+            </span>
             <span class="input-wrapper">
               <button class="button-minus" type="button">
                 <span class="visually-hidden">Минус.</span>
               </button>
-              <input class="amount-field field" type="text" id="amount" name="amount" placeholder="1" />
+              <input class="field amount-field " type="text" id="amount" name="amount" placeholder="1" />
               <button class="button-plus" type="button">
                 <span class="visually-hidden">Плюс.</span>
               </button>

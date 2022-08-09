@@ -17,11 +17,12 @@ const sliderCards = document.querySelectorAll('.slider-card');
 const sliderButtonNext = document.querySelector('.next-slide');
 const sliderButtonPrev = document.querySelector('.previous-slide');
 
-let index = 0;
+let slideIndex = 0;
 
 sliderButtons.forEach((button, index) => {
   button.addEventListener('click', (evt) => {
     evt.preventDefault();
+    slideIndex = index;
     document.querySelector('.slider-pagination-button.is-active').classList.remove('is-active');
     document.querySelector('.slider-card.is-active').classList.remove('is-active');
     button.classList.add('is-active');
@@ -31,28 +32,28 @@ sliderButtons.forEach((button, index) => {
 
 sliderButtonNext.addEventListener('click', (evt) => {
   evt.preventDefault();
-  sliderButtons[index].classList.remove('is-active');
-  sliderCards[index].classList.remove('is-active');
-  if (index === sliderButtons.length - 1) {
-    index = 0;
+  sliderButtons[slideIndex].classList.remove('is-active');
+  sliderCards[slideIndex].classList.remove('is-active');
+  if (slideIndex === sliderButtons.length - 1) {
+    slideIndex = 0;
   } else {
-    index = index + 1;
+    slideIndex = slideIndex + 1;
   }
-  sliderButtons[index].classList.add('is-active');
-  sliderCards[index].classList.add('is-active');
+  sliderButtons[slideIndex].classList.add('is-active');
+  sliderCards[slideIndex].classList.add('is-active');
 });
 
 sliderButtonPrev.addEventListener('click', (evt) => {
   evt.preventDefault();
-  sliderButtons[index].classList.remove('is-active');
-  sliderCards[index].classList.remove('is-active');
-  if (!index) {
-    index = sliderButtons.length - 1;
+  sliderButtons[slideIndex].classList.remove('is-active');
+  sliderCards[slideIndex].classList.remove('is-active');
+  if (!slideIndex) {
+    slideIndex = sliderButtons.length - 1;
   } else {
-    index = index - 1;
+    slideIndex = slideIndex - 1;
   }
-  sliderButtons[index].classList.add('is-active');
-  sliderCards[index].classList.add('is-active');
+  sliderButtons[slideIndex].classList.add('is-active');
+  sliderCards[slideIndex].classList.add('is-active');
 });
 
 
