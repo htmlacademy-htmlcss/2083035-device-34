@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>Девайс</title>
   <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/svg+xml" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body>
@@ -77,7 +79,7 @@
                   <a class="popover-item-link" href="#">Виртуальная реальность</a>
                 </li>
                 <li class="popover-item">
-                  <a class="popover-item-link popover-item-active" href="catalog.html">Моноподы для селфи</a>
+                  <a class="popover-item-link" href="catalog.html">Моноподы для селфи</a>
                 </li>
                 <li class="popover-item">
                   <a class="popover-item-link" href="#">Экшн-камеры</a>
@@ -308,7 +310,7 @@
               работоспособность покупки. </p>
             <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
             <address class="contacts-address">
-              <p class="contacts-address-info">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+              <p class="contacts-address-info">Санкт-Петербург, набережная реки Карповки,5,литера П.</p>
               <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
             </address>
             <h3 class="contacts-subtitle">Время работы</h3>
@@ -407,12 +409,12 @@
           <div class="modal-group-one">
             <label class="modal-label name-label" for="name">Ваше имя:</label>
             <input class="field name-field " type="text" id="name" name="name" placeholder="Введите имя" />
-            <button class="name-field-button" type="button"></button>
+            <span class="name-field-icon"></span>
             <label class="modal-label email-label " for="modal-email">Ваш e-mail:</label>
-            <!--Для появления сообщения об ошибке тегам <span> и <input> добавить класс modal-error-->
-            <span class="modal-error-description ">Забавный у вас адрес</span>
+            <!--Для появления сообщения об ошибке тегам <span class="modal-error-description "> и <input> добавить класс modal-error-->
+            <span class="modal-error-description  ">Забавный у вас адрес</span>
             <input class="field email-field" type="text" id="modal-email" name="email" placeholder="Введите e-mail" />
-            <button class="email-field-button" type="button"></button>
+            <span class="email-field-icon"></span>
           </div>
           <div class="modal-group-two">
             <label class="modal-label product-label" for="product">Что нужно привезти:</label>
@@ -425,11 +427,12 @@
                 по требованиям
                 к провозу багажа.</span>
             </span>
-            <span class="input-wrapper">
+            <!--Для появления сообщения об ошибке тегу <span class="input-wrapper"> добавить класс modal-error-->
+            <span class="input-wrapper ">
               <button class="button-minus" type="button">
                 <span class="visually-hidden">Минус.</span>
               </button>
-              <input class="field amount-field " type="text" id="amount" name="amount" placeholder="1" />
+              <input class="field amount-field  " type="text" id="amount" name="amount" placeholder="1" />
               <button class="button-plus" type="button">
                 <span class="visually-hidden">Плюс.</span>
               </button>

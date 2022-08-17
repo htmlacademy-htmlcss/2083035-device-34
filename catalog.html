@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>Девайс</title>
   <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/svg+xml" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body>
@@ -27,35 +29,37 @@
           <a class="navigation-user-link navigation-cabinet" href="#">Коля Петухов</a>
           <a class="navigation-user-link navigation-log-out" href="#">Выйти</a>
           <a class="navigation-user-link navigation-compare" href="#">Сравнить</a>
-          <button class="navigation-user-link navigation-basket" type="button">Корзина</button>
-          <!-- Поповер корзина -->
-          <div class="popover-basket">
-            <div class="popover-basket-content">
-              <ul class="popover-basket-list">
-                <li class="popover-basket-item">
-                  <a class="popover-basket-link">
-                    <img class="popover-basket-img" src="images/product-1.jpg" width="39" height="43"
-                      alt="Любительская селфи-палка.">
-                    <p class="popover-basket-description">Любительская<br>селфи палка</p>
-                  </a>
-                  <button class="popover-close-button"></button>
-                </li>
-                <li class="popover-basket-item">
-                  <a class="popover-basket-link">
-                    <img class="popover-basket-img" src="images/product-2.jpg" width="39" height="43"
-                      alt="Профессиональная селфи палка.">
-                    <p class="popover-basket-description">Профессиональная<br> селфи палка</p>
-                  </a>
-                  <button class="popover-close-button"></button>
-                </li>
-              </ul>
-              <div class="popover-container">
-                <span class="popover-container-info">Товаров:</span>
-                <span class="popover-container-info">2</span>
-                <span class="popover-container-info">Сумма:</span>
-                <span class="popover-container-info">2000 ₽</span>
+          <div class="navigation-basket-wrapper">
+            <button class="navigation-user-link navigation-basket" type="button">Корзина</button>
+            <!-- Поповер корзина -->
+            <div class="popover-basket">
+              <div class="popover-basket-content">
+                <ul class="popover-basket-list">
+                  <li class="popover-basket-item">
+                    <a class="popover-basket-link" href="#">
+                      <img class="popover-basket-img" src="images/product-1.jpg" width="39" height="43"
+                        alt="Любительская селфи-палка.">
+                      <p class="popover-basket-description">Любительская<br>селфи палка</p>
+                    </a>
+                    <button class="popover-close-button"></button>
+                  </li>
+                  <li class="popover-basket-item">
+                    <a class="popover-basket-link" href="#">
+                      <img class="popover-basket-img" src="images/product-2.jpg" width="39" height="43"
+                        alt="Профессиональная селфи палка.">
+                      <p class="popover-basket-description">Профессиональная<br> селфи палка</p>
+                    </a>
+                    <button class="popover-close-button"></button>
+                  </li>
+                </ul>
+                <div class="popover-container">
+                  <span class="popover-container-info">Товаров:</span>
+                  <span class="popover-container-info">2</span>
+                  <span class="popover-container-info">Сумма:</span>
+                  <span class="popover-container-info">2000 ₽</span>
+                </div>
+                <button class="open-basket-button" type="button">Открыть корзину</button>
               </div>
-              <button class="open-basket-button" type="button">Открыть корзину</button>
             </div>
           </div>
         </div>
@@ -209,7 +213,7 @@
               <ul class="filter-bluetooth-list">
                 <li class="filter-bluetooth-item">
                   <label class="control-bluetooth-label">
-                    <input class="visually-hidden bluetooth-control-input" type="radio" name="bluetooth" value="yes"
+                    <input class="visually-hidden control-bluetooth-input" type="radio" name="bluetooth" value="yes"
                       checked />
                     <span class="control-label-radio">
                       Есть
@@ -219,7 +223,7 @@
                 </li>
                 <li class="filter-bluetooth-item">
                   <label class="control-bluetooth-label">
-                    <input class="visually-hidden bluetooth-control-input" type="radio" name="bluetooth" value="no" />
+                    <input class="visually-hidden control-bluetooth-input" type="radio" name="bluetooth" value="no" />
                     <span class="control-label-radio">
                       Нет
                       <span class="control-mark-radio"></span>
@@ -254,16 +258,16 @@
             </div>
             <!-- Каталог товаров -->
             <ul class="catalog-list">
-              <!-- Для появления метки NEW, нужно добавить класс "new" тэгу <li> > -->
               <li class="catalog-item ">
-                <a class="catalog-card-link" href="#">
+                <!-- Для появления метки NEW,  добавить класс "new" тэгу <a> > -->
+                <a class="catalog-card-link new" href=" #">
                   <img class="catalog-card-img" src="images/product-1.jpg" width="360" height="380"
                     alt="Любительская селфи-палка.">
                   <div class="catalog-card-content">
                     <h3 class="catalog-card-title">Любительская<br> селфи-палка</h3>
-                    <span class="catalog-card-price">&nbsp;&nbsp;&nbsp;500 ₽</span>
+                    <span class="catalog-card-price">500 ₽</span>
                   </div>
-                  <span class="button product-about">Подробнее</span>
+                  <span class=" product-about">Подробнее</span>
                 </a>
               </li>
               <li class="catalog-item">
@@ -274,7 +278,7 @@
                     <h3 class="catalog-card-title">Профессиональная<br> селфи-палка </h3>
                     <span class="catalog-card-price">1 500 ₽</span>
                   </div>
-                  <span class="button product-about">Подробнее</span>
+                  <span class=" product-about">Подробнее</span>
                 </a>
               </li>
               <li class="catalog-item">
@@ -285,7 +289,7 @@
                     <h3 class="catalog-card-title">Непотопляемая<br>селфи-палка</h3>
                     <span class="catalog-card-price">2 500 ₽</span>
                   </div>
-                  <span class="button product-about">Подробнее</span>
+                  <span class="product-about">Подробнее</span>
                 </a>
               </li>
               <li class="catalog-item">
@@ -296,7 +300,7 @@
                     <h3 class="catalog-card-title">Селфи-палка «Следуй <br>за мной»</h3>
                     <span class="catalog-card-price">1 500 ₽</span>
                   </div>
-                  <span class="button product-about">Подробнее</span>
+                  <span class=" product-about">Подробнее</span>
                 </a>
               </li>
             </ul>
@@ -306,7 +310,7 @@
               <a class="pagination-button" href="#">Назад</a>
               <ul class="pagination-list">
                 <li class="pagination-item">
-                  <a class="pagination-item-link" href="#">1</a>
+                  <span class="pagination-item-link is-active">1</span>
                 </li>
                 <li class="pagination-item">
                   <a class="pagination-item-link" href="#">2</a>
