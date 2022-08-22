@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Девайс</title>
+  <title>Интернет-магазин "Девайс"</title>
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="icon" href="favicon.ico" type="image/svg+xml" />
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -15,6 +15,7 @@
     <header class="page-header container">
       <!-- Лого -->
       <a class="navigation-logo" href="index.html">
+        <span class="visually-hidden">Переход на главную страницу.</span>
         <img class="page-header-logo" src="images/logo-black.svg" width="145" height="36" alt="Логотип Девайс." />
       </a>
       <!-- Пользовательская навигация -->
@@ -135,6 +136,7 @@
       </ul>
       <!-- Фильтры -->
       <section class="catalog-products">
+        <h2 class="visually-hidden">Список товаров с фильтрами</h2>
         <div class=" catalog-wrapper container">
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
             <h3 class="filter-title">Фильтр:</h3>
@@ -237,7 +239,7 @@
           <!-- Сортировка -->
           <div class="catalog-right-column">
             <div class="sorting-container">
-              <h3 class="sorting-title">Cортировка:</h3>
+              <span class="sorting-title">Cортировка:</span>
               <select class="sorting-select">
                 <option value="popular">Популярные</option>
                 <option value="cheap">Дешевые</option>
@@ -259,8 +261,8 @@
             <!-- Каталог товаров -->
             <ul class="catalog-list">
               <li class="catalog-item ">
-                <!-- Для появления метки NEW,  добавить класс "new" тэгу <a> > -->
-                <a class="catalog-card-link new" href=" #">
+                <!-- Для появления метки NEW,  добавить тэгу <a>  класс new -->
+                <a class="catalog-card-link" href=" #">
                   <img class="catalog-card-img" src="images/product-1.jpg" width="360" height="380"
                     alt="Любительская селфи-палка.">
                   <div class="catalog-card-content">
