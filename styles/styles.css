@@ -160,7 +160,7 @@ img {
 .search-input {
   position: relative;
   margin: 0 -2px 0 0;
-  padding: 9px 30px 9px 48px;
+  padding: 9px 30px 8px 48px;
   width: 100%;
   font-family: inherit;
   font-size: 16px;
@@ -204,7 +204,7 @@ img {
 .search-button {
   position: relative;
   margin: 0 0 0 -2px;
-  padding: 9px 10px;
+  padding: 8px 10px;
   min-width: 160px;
   max-width: 320px;
   border: 2px solid #000000;
@@ -491,6 +491,7 @@ img {
 }
 
 .open-basket-button {
+  display: block;
   margin: 0 20px;
   padding: 14.5px 23px;
   text-align: center;
@@ -500,6 +501,7 @@ img {
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  text-decoration: none;
   background-color: #ffffff;
   color: #000000;
   border: none;
@@ -787,7 +789,7 @@ img {
 /* Buttons (arrows) */
 
 .buttons-wrapper {
-  position: relative;
+  position: absolute;
 }
 
 .previous-slide {
@@ -846,11 +848,10 @@ img {
   position: absolute;
   display: flex;
   flex-wrap: wrap;
-  top: 338px;
-  right: 38px;
+  bottom: 177px;
+  right: 37px;
   margin: 0;
   padding: 0;
-  list-style-type: none;
   z-index: 2;
 }
 
@@ -907,7 +908,7 @@ img {
   align-items: center;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(#ffe17f 21%, #ffffff 21%);
+  background-image: linear-gradient(#ffe17f 112px, #ffffff 112px);
 }
 
 .slider-card.is-active {
@@ -924,19 +925,16 @@ img {
 
 .slider-info-wrapper {
   width: 560px;
-  position: relative;
-  padding: 84px 2px 40px 2px;
+  padding: 47px 0 40px 0;
 }
 
 .slider-number {
-  position: absolute;
-  top: 43px;
-  right: 48px;
+  display: block;
   color: #ffffff;
   font-size: 180px;
   font-weight: 700;
-  margin: 0;
-  padding: 0;
+  margin: 0 0 10px 0;
+  padding: 0 47px 0 0;
   background-color: transparent;
   text-align: end;
 }
@@ -966,8 +964,9 @@ img {
 }
 
 .technical-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  gap: 15px 10px;
   margin: 0;
   padding: 0;
 }
@@ -976,7 +975,7 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
-  margin: 0 20px 20px 0;
+  align-content: flex-start;
 }
 
 .technical-term {
@@ -998,8 +997,8 @@ img {
 /* Catalog index */
 
 .catalog-index {
-  padding-top: 22px;
-  padding-bottom: 16px;
+  padding-top: 40px;
+  padding-bottom: 24px;
 }
 
 .catalog-index-list {
@@ -1015,8 +1014,6 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 250px;
-  width: 160px;
   margin: 0;
   padding: 0 0;
 }
@@ -1032,11 +1029,8 @@ img {
 }
 
 .catalog-index-link {
-  display: block;
   margin: 0;
   padding: 193px 0 0 0;
-  width: 160px;
-  height: 160px;
   font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -1046,6 +1040,7 @@ img {
   color: #000000;
   background-image: linear-gradient(#ffe17f 160px, transparent 160px);
   outline: none;
+  flex-grow: 1;
 }
 
 .catalog-index-link:hover {
@@ -1334,7 +1329,7 @@ img {
   left: 0;
   content: "";
   width: 125px;
-  height: 100px;
+  height: 100%;
   background-color: #ffe17f;
   background-image: url('../images/rare-product.svg');
   background-repeat: no-repeat;
@@ -1641,7 +1636,7 @@ img {
 
 .page-footer {
   margin: 0;
-  padding: 60px 0 45px 0;
+  padding: 63px 0 45px 0;
   background-color: #444444;
   flex-grow: 1
 }
@@ -1999,6 +1994,9 @@ img {
 
 .field {
   padding: 20px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
   background-color: #f0f0f0;
   border: none;
   outline: none;
@@ -2007,6 +2005,7 @@ img {
 .field::placeholder {
   color: #000000;
   opacity: 0.3;
+
 }
 
 .field:hover {

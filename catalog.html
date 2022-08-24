@@ -21,10 +21,11 @@
       <!-- Пользовательская навигация -->
       <div class="navigation-container">
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="search">Поиск по сайту.</label>
           <div class="search-form-wrapper">
             <input id="search" class="search-input" type="search" placeholder="Текст поиска" name="search" />
           </div>
-          <button class="search-button" type="button">Найти</button>
+          <button class="search-button" type="submit">Найти</button>
         </form>
         <div class="navigation-user">
           <a class="navigation-user-link navigation-cabinet" href="#">Коля Петухов</a>
@@ -42,7 +43,9 @@
                         alt="Любительская селфи-палка.">
                       <p class="popover-basket-description">Любительская<br>селфи палка</p>
                     </a>
-                    <button class="popover-close-button" type="button"></button>
+                    <button class="popover-close-button" type="button">
+                      <span class="visually-hidden">Удалить товар из корзины.</span>
+                    </button>
                   </li>
                   <li class="popover-basket-item">
                     <a class="popover-basket-link" href="#">
@@ -50,7 +53,9 @@
                         alt="Профессиональная селфи палка.">
                       <p class="popover-basket-description">Профессиональная<br> селфи палка</p>
                     </a>
-                    <button class="popover-close-button" type="button"></button>
+                    <button class="popover-close-button" type="button">
+                      <span class="visually-hidden">Удалить товар из корзины.</span>
+                    </button>
                   </li>
                 </ul>
                 <div class="popover-container">
@@ -59,7 +64,7 @@
                   <span class="popover-container-info">Сумма:</span>
                   <span class="popover-container-info">2000 ₽</span>
                 </div>
-                <button class="open-basket-button" type="button">Открыть корзину</button>
+                <a class="open-basket-button" href="#">Открыть корзину</a>
               </div>
             </div>
           </div>
