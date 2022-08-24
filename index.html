@@ -20,10 +20,11 @@
       <!-- Пользовательская навигация -->
       <div class="navigation-container">
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="search">Поиск по сайту.</label>
           <div class="search-form-wrapper">
             <input id="search" class="search-input" type="search" placeholder="Текст поиска" name="search" />
           </div>
-          <button class="search-button" type="button">Найти</button>
+          <button class="search-button" type="submit">Найти</button>
         </form>
         <div class="navigation-user">
           <a class="navigation-user-link navigation-log-in" href="#">Войти</a>
@@ -40,7 +41,9 @@
                         alt="Любительская селфи-палка.">
                       <p class="popover-basket-description">Любительская<br>селфи палка</p>
                     </a>
-                    <button class="popover-close-button" type="button"></button>
+                    <button class="popover-close-button" type="button">
+                      <span class="visually-hidden">Удалить товар из корзины.</span>
+                    </button>
                   </li>
                   <li class="popover-basket-item">
                     <a class="popover-basket-link" href="#">
@@ -48,7 +51,9 @@
                         alt="Профессиональная селфи палка.">
                       <p class="popover-basket-description">Профессиональная<br> селфи палка</p>
                     </a>
-                    <button class="popover-close-button" type="button"></button>
+                    <button class="popover-close-button" type="button">
+                      <span class="visually-hidden">Удалить товар из корзины.</span>
+                    </button>
                   </li>
                 </ul>
                 <div class="popover-container">
@@ -57,7 +62,7 @@
                   <span class="popover-container-info">Сумма:</span>
                   <span class="popover-container-info">2000 ₽</span>
                 </div>
-                <button class="open-basket-button" type="button">Открыть корзину</button>
+                <a class="open-basket-button" href="#">Открыть корзину</a>
               </div>
             </div>
           </div>
@@ -207,42 +212,40 @@
         </div>
       </section>
       <!-- Каталог -->
-      <section class="catalog-index">
+      <section class="catalog-index container">
         <h2 class="visually-hidden">Каталог товаров</h2>
-        <div class="container">
-          <ul class="catalog-index-list">
-            <li class="catalog-index-item ">
-              <a class="catalog-index-link catalog-index-link-one" href="#">
-                <h3 class="catalog-index-title">Виртуальная реальность</h3>
-              </a>
-            </li>
-            <li class="catalog-index-item">
-              <a class="catalog-index-link catalog-index-link-two" href="catalog.html">
-                <h3 class="catalog-index-title">Моноподы<br>для селфи</h3>
-              </a>
-            </li>
-            <li class="catalog-index-item ">
-              <a class="catalog-index-link catalog-index-link-three" href="#">
-                <h3 class="catalog-index-title">Экшн-камеры</h3>
-              </a>
-            </li>
-            <li class="catalog-index-item">
-              <a class="catalog-index-link catalog-index-link-four" href="#">
-                <h3 class="catalog-index-title">Фитнес-браслеты</h3>
-              </a>
-            </li>
-            <li class="catalog-index-item">
-              <a class="catalog-index-link catalog-index-link-five" href="#">
-                <h3 class="catalog-index-title">Умные часы</h3>
-              </a>
-            </li>
-            <li class="catalog-index-item">
-              <a class="catalog-index-link catalog-index-link-six" href="#">
-                <h3 class="catalog-index-title">Квадрокоптеры</h3>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="catalog-index-list">
+          <li class="catalog-index-item ">
+            <a class="catalog-index-link catalog-index-link-one" href="#">
+              <h3 class="catalog-index-title">Виртуальная реальность</h3>
+            </a>
+          </li>
+          <li class="catalog-index-item">
+            <a class="catalog-index-link catalog-index-link-two" href="catalog.html">
+              <h3 class="catalog-index-title">Моноподы<br>для селфи</h3>
+            </a>
+          </li>
+          <li class="catalog-index-item ">
+            <a class="catalog-index-link catalog-index-link-three" href="#">
+              <h3 class="catalog-index-title">Экшн-камеры</h3>
+            </a>
+          </li>
+          <li class="catalog-index-item">
+            <a class="catalog-index-link catalog-index-link-four" href="#">
+              <h3 class="catalog-index-title">Фитнес-браслеты</h3>
+            </a>
+          </li>
+          <li class="catalog-index-item">
+            <a class="catalog-index-link catalog-index-link-five" href="#">
+              <h3 class="catalog-index-title">Умные часы</h3>
+            </a>
+          </li>
+          <li class="catalog-index-item">
+            <a class="catalog-index-link catalog-index-link-six" href="#">
+              <h3 class="catalog-index-title">Квадрокоптеры</h3>
+            </a>
+          </li>
+        </ul>
       </section>
       <!-- Услуги -->
       <section class="services">
@@ -332,6 +335,7 @@
           <div class="newsletter-container-two">
             <!-- Для отображения ошибки, добавить тегу <input> класс has-error-->
             <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+              <label class="visually-hidden" for="email">Подписаться на рассылку.</label>
               <input id="email" class="newsletter-input " type="email" placeholder="Ваш e-mail" name="email" required />
               <button class="newsletter-button " type="submit">Подписаться</button>
             </form>
@@ -438,7 +442,7 @@
               </button>
             </span>
           </div>
-          <button class=" modal-button button" type="button">Отправить</button>
+          <button class=" modal-button button" type="submit">Отправить</button>
         </form>
       </section>
     </div>
